@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>심리테스트</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+<script>
+    Kakao.init('99a89a44da0f8bd2e7e016f353bbc67d'); // 발급받은 앱 키로 SDK 초기화
+    console.log(Kakao.isInitialized()); // SDK 초기화 여부 확인
+</script>
+
+</script>
+
+</head>
+
+<body>
+    <div id="app">
+        <h1>심리테스트</h1>
+        <div id="progress-container" style="display: none;">
+            <div id="progress-bar"></div>
+            <div id="progress-text">1 / 15</div>
+        </div>
+        <button onclick="startTest()">테스트 시작하기</button>
+        <div id="question-container" style="display: none;">
+            <!-- 질문 내용이 JavaScript를 통해 동적으로 추가됩니다. -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
