@@ -132,16 +132,16 @@ function shareToKakao(resultText) {
             description: resultText,
             imageUrl: 'https://yourimageurl.com/image.png', // 공유할 이미지 URL (선택 사항)
             link: {
-                mobileWebUrl: 'https://yourwebsite.com', // 공유할 웹사이트 URL
-                webUrl: 'https://yourwebsite.com'
+                mobileWebUrl: 'https://hooo234.github.io/', // 공유할 웹사이트 URL
+                webUrl: 'https://hooo234.github.io/'
             }
         },
         buttons: [
             {
                 title: '결과 보러가기',
                 link: {
-                    mobileWebUrl: 'https://yourwebsite.com',
-                    webUrl: 'https://yourwebsite.com'
+                    mobileWebUrl: 'https://hooo234.github.io/',
+                    webUrl: 'https://hooo234.github.io/'
                 }
             }
         ]
