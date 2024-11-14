@@ -57,6 +57,9 @@ function showQuestion() {
             <button onclick="nextQuestion()">다음</button>
         </div>
     `;
+
+    
+    
 }
 
 // 답변 선택
@@ -149,29 +152,41 @@ function shareToKakao(resultText) {
 }
 
 
+
+
 // 결과 표시
 function showResult(type) {
     const resultContainer = document.getElementById("question-container");
     let resultText = "";
+    let resultImage = ""; // 결과 이미지 URL을 저장할 변수
 
+    // 결과 유형별 이미지와 설명 설정
     switch (type) {
         case "leader":
-            resultText = "당신은 활동적 리더형입니다! 자신감이 넘치고 팀을 이끄는 데 강점이 있습니다.";
+            resultText = "당신은 활동적 리더형입니다! 자신감이 넘치고 팀을 이끄는 데 강점이 있습니다. 사람들과의 소통을 중요하게 여기며, 어려운 상황에서도 해결책을 빠르게 찾으려는 태도를 가지고 있습니다. 항상 목표를 향해 적극적으로 나아가며, 주변 사람들에게 영감을 주는 존재로 여겨집니다. 단, 때때로 타인의 의견을 충분히 듣는 것이 중요할 수 있습니다. 팀워크를 더 강화한다면 더욱 훌륭한 리더로 성장할 수 있을 것입니다.";
+            resultImage = "images/리더형.jpg"; // leader 유형의 이미지 경로
             break;
         case "analyst":
-            resultText = "당신은 분석가형입니다! 논리적 사고와 신중한 접근을 중요시합니다.";
+            resultText = "당신은 분석가형입니다! 논리적 사고와 신중한 접근을 중요시하며, 문제를 체계적으로 해결하려는 경향이 있습니다. 복잡한 상황에서도 차분하게 분석하고, 명확한 데이터와 사실을 바탕으로 결정을 내립니다. 창의적인 아이디어보다는 실용적이고 현실적인 접근을 선호하며, 완성도 높은 결과물을 만드는 데 탁월합니다. 단, 지나치게 신중할 경우 결정이 지연될 수 있으니, 때로는 직관에 따라 빠르게 행동해 보는 것도 좋습니다.";
+            resultImage = "images/분석형.jpg"; // analyst 유형의 이미지 경로
             break;
         case "collaborator":
-            resultText = "당신은 협력자형입니다! 타인의 의견을 존중하고 조화를 추구하는 성향입니다.";
+            resultText = "당신은 협력자형입니다! 타인의 의견을 존중하고 조화를 추구하는 성향이 강합니다. 갈등을 피하고, 항상 팀의 화합을 중요하게 생각하며 주변 사람들을 잘 돕습니다. 당신의 이러한 태도는 팀의 분위기를 좋게 하고, 서로 이해하는 환경을 조성하는 데 기여합니다. 다만, 때로는 자신의 의견을 더 적극적으로 표현하는 것도 중요합니다. 당신의 생각이 팀에 큰 도움이 될 수 있습니다.";
+            resultImage = "images/협력자형.jpg"; // collaborator 유형의 이미지 경로
             break;
         case "thinker":
-            resultText = "당신은 내향적 사색가형입니다! 조용한 환경에서 깊이 생각하는 것을 선호합니다.";
+            resultText = "당신은 내향적 사색가형입니다! 조용한 환경에서 깊이 생각하는 것을 선호하며, 자신의 내면을 들여다보는 시간이 많습니다. 창의적이고 독창적인 아이디어를 가지고 있으며, 문제를 새로운 관점에서 접근하는 데 능합니다. 깊이 있는 사고와 성찰을 통해 의미 있는 결과를 만들어내지만, 혼자만의 시간에 너무 몰두하지 않도록 주의할 필요도 있습니다. 때로는 주변 사람들과 소통하며 의견을 공유해 보는 것도 도움이 될 것입니다.";
+            resultImage = "images/분석형.jpg"; // thinker 유형의 이미지 경로
             break;
     }
 
+    // 결과 화면에 이미지와 설명을 함께 표시
     resultContainer.innerHTML = `
         <h2>테스트 결과</h2>
+        <img src="${resultImage}" alt="${type} 이미지" style="width: 200px; margin-bottom: 20px;">
         <p>${resultText}</p>
-        <button onclick="shareToKakao('${resultText}')">카카오톡으로 공유하기</button>
+        <button onclick="shareResult()">카카오톡으로 공유하기</button>
     `;
+
+    
 }
