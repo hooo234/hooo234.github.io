@@ -133,6 +133,7 @@ function shareToKakao(resultText) {
         content: {
             title: '심리테스트 결과',
             description: resultText,
+            imageUrl: 'https://yourimageurl.com/image.png', // 공유할 이미지 URL (선택 사항)
             link: {
                 mobileWebUrl: 'https://hooo234.github.io/', // 공유할 웹사이트 URL
                 webUrl: 'https://hooo234.github.io/'
