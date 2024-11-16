@@ -133,7 +133,7 @@ function shareToKakao(resultText) {
         content: {
             title: '심리테스트 결과',
             description: resultText,
-            imageUrl: 'https://yourimageurl.com/image.png', // 공유할 이미지 URL (선택 사항)
+            imageUrl: '리더형.jpg', // 공유할 이미지 URL (선택 사항)
             link: {
                 mobileWebUrl: 'https://hooo234.github.io/', // 공유할 웹사이트 URL
                 webUrl: 'https://hooo234.github.io/'
@@ -185,7 +185,7 @@ function showResult(type) {
         <h2>테스트 결과</h2>
         <img src="${resultImage}" alt="${type} 이미지" style="width: 200px; margin-bottom: 20px;">
         <p>${resultText}</p>
-        <button onclick="shareResult()">카카오톡으로 공유하기</button>
+        <button onclick="shareToKakao('${'테스트 결과입니다!'}')">카카오톡으로 공유하기</button>
     `;
 
     
