@@ -602,7 +602,7 @@ function calculateResult() {
                 { 
                     type: "책",
                     content: "《회복 탄력성》 by 김주환",
-                    image: "회복 탄력성.jpg" 
+                    image: "회복탄력성.jpg" 
                 },
 
                 { type: "기타", content: "감정 표현을 돕는 창작 활동 (그림, 글쓰기 등)" }
